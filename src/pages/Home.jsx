@@ -30,11 +30,7 @@ const Home = () => {
     }
 
     if (apiData?.length === 0) {
-      return (
-        <TextCenter>
-          <Loader />
-        </TextCenter>
-      );
+      return <TextCenter>No Result!</TextCenter>;
     }
 
     if (apiData) {

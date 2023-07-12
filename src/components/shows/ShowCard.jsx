@@ -9,7 +9,8 @@ const ShowCard = ({ name, image, id, summary, onStarMeClick, isStarred }) => {
     : 'No Description';
 
   const starBtnRef = useRef();
-  const handleStarClick = () => {
+  const handleStarClick = e => {
+    e.preventDefault();
     onStarMeClick(id);
     const starBtnEl = starBtnRef.current;
 
@@ -24,22 +25,22 @@ const ShowCard = ({ name, image, id, summary, onStarMeClick, isStarred }) => {
 
   return (
     <SearchCard>
-      <SearchImgWrapper>
-        <img src={image} alt={name} />
-      </SearchImgWrapper>
+      <a href={`/show/${id}`} target="_blank" rel="noreferrer">
+        <SearchImgWrapper>
+          <img src={image} alt={name} />
+        </SearchImgWrapper>
 
-      <h1>{name}</h1>
+        <h1>{name}</h1>
 
-      <p>{summaryStripped}</p>
+        <p>{summaryStripped}</p>
 
-      <ActionSection>
-        <a href={`/show/${id}`} target="_blank" rel="noreferrer">
-          Read More...
-        </a>
-        <StarBtn ref={starBtnRef} type="button" onClick={handleStarClick}>
-          <StarIcon active={isStarred} />
-        </StarBtn>
-      </ActionSection>
+        <ActionSection>
+          <p>Read More...</p>
+          <StarBtn ref={starBtnRef} type="button" onClick={handleStarClick}>
+            <StarIcon active={isStarred} />
+          </StarBtn>
+        </ActionSection>
+      </a>
     </SearchCard>
   );
 };
@@ -51,7 +52,7 @@ const ActionSection = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  a {
+  p {
     text-decoration-color: #fff;
     color: #fff;
     &:hover {

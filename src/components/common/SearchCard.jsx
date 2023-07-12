@@ -17,6 +17,10 @@ export const SearchCard = styled.div`
   width: 300px;
   height: 100%;
   margin: 0 15px 40px;
+  a {
+    color: #ffffff;
+    text-decoration: none;
+  }
   h1 {
     margin: 10px 0;
     font-size: 21px;
