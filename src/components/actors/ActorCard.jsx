@@ -1,11 +1,12 @@
+import { styled } from 'styled-components';
 import { SearchCard, SearchImgWrapper } from '../common/SearchCard';
 
 const ActorCard = ({ image, name, country, birthday, deathday, gender }) => {
   return (
     <SearchCard>
-      <SearchImgWrapper>
+      <ActorImgWrapper>
         <img src={image} alt={name} />
-      </SearchImgWrapper>
+      </ActorImgWrapper>
 
       <h1>
         {name} {!!gender && `(${gender})`}
@@ -20,3 +21,9 @@ const ActorCard = ({ image, name, country, birthday, deathday, gender }) => {
 };
 
 export default ActorCard;
+
+const ActorImgWrapper = styled(SearchImgWrapper)`
+  img:hover {
+    scale: 1;
+  }
+`;
