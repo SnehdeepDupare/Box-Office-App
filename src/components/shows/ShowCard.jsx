@@ -72,6 +72,9 @@ const StarBtn = styled.button`
   align-items: center;
   &:hover {
     cursor: pointer;
+    ${StarIcon} {
+      background-color: #ffc806;
+    }
   }
   &.animate {
     ${StarIcon} {

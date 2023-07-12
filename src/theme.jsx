@@ -20,6 +20,16 @@ const GlobalStyles = createGlobalStyle`
       background-color: black;
       color: white;
     }
+    &::-webkit-scrollbar{
+      width: 10px;
+    }    
+    &::-webkit-scrollbar-thumb{
+      background-color: ${({ theme }) => theme.mainColors.hotred};
+      border-radius: 10px;
+    }   
+    &::-webkit-scrollbar-thumb:hover{
+      background-color: #970209;
+    }
   `;
 
 export const GlobalTheme = ({ children }) => {
