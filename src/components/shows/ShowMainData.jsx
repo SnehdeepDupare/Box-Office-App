@@ -98,7 +98,6 @@ const Genres = styled.div`
     margin-bottom: 0;
     color: ${({ theme }) => theme.mainColors.hotred};
     border: 0.5px solid #d0c9ff;
-    /* background-color: #d0c9ff; */
     padding: 3px 13px;
     border-radius: 20px;
     font-size: 14px;

@@ -3,6 +3,7 @@ import { useStarredShows } from '../lib/useStarredShows';
 import { getShowsByIds } from '../api/tvmaze';
 import ShowGrid from '../components/shows/ShowGrid';
 import { TextCenter } from '../components/common/TextCenter';
+import Loader from '../components/common/Loader';
 
 const Starred = () => {
   const [starredShowsIds] = useStarredShows();
@@ -28,7 +29,11 @@ const Starred = () => {
     return <TextCenter>Error Occured: {starredShowsError.message}</TextCenter>;
   }
 
-  return <TextCenter>Loading...</TextCenter>;
+  return (
+    <TextCenter>
+      <Loader />
+    </TextCenter>
+  );
 };
 
 export default Starred;

@@ -7,6 +7,7 @@ import Seasons from '../components/shows/Seasons';
 import Cast from '../components/shows/Cast';
 import { styled } from 'styled-components';
 import { TextCenter } from '../components/common/TextCenter';
+import Loader from '../components/common/Loader';
 
 const Show = () => {
   const { showId } = useParams();
@@ -18,7 +19,7 @@ const Show = () => {
   });
 
   if (showError) {
-    return <TextCenter>We have an Error: {showError.message}</TextCenter>;
+    return <TextCenter>Error: {showError.message}</TextCenter>;
   }
 
   if (showData) {
@@ -58,7 +59,11 @@ const Show = () => {
     );
   }
 
-  return <TextCenter>Loading...</TextCenter>;
+  return (
+    <TextCenter>
+      <Loader />
+    </TextCenter>
+  );
 };
 
 export default Show;

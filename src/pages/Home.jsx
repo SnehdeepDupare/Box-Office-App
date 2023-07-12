@@ -5,6 +5,7 @@ import ShowGrid from '../components/shows/ShowGrid';
 import ActorsGrid from '../components/actors/ActorsGrid';
 import { useQuery } from '@tanstack/react-query';
 import { TextCenter } from '../components/common/TextCenter';
+import Loader from '../components/common/Loader';
 
 const Home = () => {
   const [filter, setFilter] = useState(null);
@@ -29,7 +30,11 @@ const Home = () => {
     }
 
     if (apiData?.length === 0) {
-      return <TextCenter>No Result!</TextCenter>;
+      return (
+        <TextCenter>
+          <Loader />
+        </TextCenter>
+      );
     }
 
     if (apiData) {
