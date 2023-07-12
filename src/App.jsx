@@ -5,6 +5,7 @@ import Starred from './pages/Starred';
 import MainLayout from './components/MainLayout';
 import Show from './pages/Show';
 import { GlobalTheme } from './theme';
+import NotFound from './pages/NotFound';
 
 const queryClient = new QueryClient();
 
@@ -20,6 +21,8 @@ function App() {
             </Route>
 
             <Route path="/show/:showId" element={<Show />} />
+
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
       </GlobalTheme>
