@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/Box-Office-App/static/js/main.df182fc5.js",
+    "main.js": "/Box-Office-App/static/js/main.d25ab52b.js",
     "static/js/787.6e354c4d.chunk.js": "/Box-Office-App/static/js/787.6e354c4d.chunk.js",
     "service-worker.js": "/Box-Office-App/service-worker.js",
     "index.html": "/Box-Office-App/index.html",
-    "main.df182fc5.js.map": "/Box-Office-App/static/js/main.df182fc5.js.map",
+    "main.d25ab52b.js.map": "/Box-Office-App/static/js/main.d25ab52b.js.map",
     "787.6e354c4d.chunk.js.map": "/Box-Office-App/static/js/787.6e354c4d.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.df182fc5.js"
+    "static/js/main.d25ab52b.js"
   ]
 }
